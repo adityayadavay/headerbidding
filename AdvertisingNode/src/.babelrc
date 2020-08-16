@@ -1,0 +1,28 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "lib": "./modules/lib",
+          "services": "./modules/services",
+          "components": "./modules/validation",
+          "config": "./src/config",
+          "middlewares": "./src/modules/middlewares"
+        }
+      }
+    ]
+  ]
+}
